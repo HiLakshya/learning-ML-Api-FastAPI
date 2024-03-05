@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import pickle
 import json
+import os 
 
 app = FastAPI()
 
@@ -48,4 +49,9 @@ def diabetes_pred(input_paramters : model_input):
 def status():
     return {'status': 'The server is up and running'}
 
-#uvicorn ml_api:app --reload
+
+port = int(os.getenv("PORT", "8000"))
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=port)
