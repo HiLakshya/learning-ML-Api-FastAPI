@@ -2,8 +2,6 @@ fastapi
 uvicorn
 pydantic
 pypi-json
-pickle5
-pickle5
 scikit-learn
 requests
 
