@@ -5,3 +5,8 @@ pypi-json
 scikit-learn
 requests
 
+Flask
+Flask-CORS
+numpy
+scikit-learn
+pydantic
